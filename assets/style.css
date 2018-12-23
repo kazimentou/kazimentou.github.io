@@ -1,0 +1,147 @@
+* {margin:0; padding: 0; box-sizing: border-box;}
+body {font-family: 'Noto Sans',Droid,Arial,Georgia,Sans-Serif; color: #000; background-color: #ebeff2; background-image: url('background.png');
+}
+.logo {width: 8rem; margin-top: 3rem;}
+.logo a {display: block;}
+.logo img {max-width:100%;}
+.nowrap > * { margin: 0 0.3rem; white-space: nowrap;}
+#bandeau {padding: 0.3rem 0.7rem 0 0; background-color: #ddd; line-height: 1.2;}
+#bandeau span {white-space: nowrap;}
+#bandeau > div:first-of-type {display: flex; justify-content: space-between;}
+
+#menu {position: fixed; top: 0; left: 0;}
+#nav-toggle {display: none;}
+#nav-toggle + ul {
+	position: absolute;
+	top: 3rem;
+	width: 7rem;
+	left: -7rem;
+	background-color: #eee;
+	text-align: center;
+	list-style: none;
+	transition: left 1s;
+}
+#nav-toggle:checked + ul {left: 0;}
+#menu label {
+	font-size: 150%;
+	padding: 0.3rem;
+	background-color: #ddd;
+}
+#menu a { display: block; padding: 0.3rem 0.5rem; text-decoration: none; color: inherit;}
+#menu a:hover { color: #fff;}
+
+h1, h2, h3, h4, h5 {text-align: center;}
+h3 {margin: 0.5em 0;}
+h3 + p {margin:0; padding:0; text-align: center; font-style: italic;}
+h3 + p a {padding: 0 10px;}
+.txt-center { text-align: center; text-indent: 0;}
+#bandeau a {text-decoration: none;}
+#bandeau div {padding: 0; text-align: center;}
+#bandeau label {cursor: pointer;}
+p:last-of-type, #detail + p {text-align: center;}
+h1 {margin-top: 0;}
+h1 + p {margin-bottom: 0;}
+label, a {padding: 0 4px;}
+label:hover, a:hover {color: #FFF; background-color: green;}
+.url-help {max-width: 64rem; margin: 0.5rem auto;}
+.url-help ul {padding-left: 1.5rem; margin: 0;}
+#detail {width: 99%; background-color: #FFF; border: 1px solid #A99; margin: 5px auto; border-spacing: 0;}
+#detail thead {background-color: #C2C2A6; }
+#detail th {padding: 5px 2px;}
+#detail tr {vertical-align: top;}
+#detail tbody tr:nth-of-type(even) {background-color: #DAE7E6;}
+#detail tbody tr:hover {background-color: #EDD780;}
+#detail tbody td:nth-of-type(3) {text-align: right; padding-right: 5px;}
+#detail tbody td:nth-of-type(7) {text-align: justify; padding: 0 5px; white-space: normal; min-width: 20rem;}
+#detail tbody td:nth-of-type(8) {white-space: normal; }
+#detail tbody td:last-of-type {text-align: center;}
+#detail + p {font-style: italic; font-size: 80%;}
+#detail td:first-of-type a:hover {background-color: initial;}
+#bandeau a img, #detail a img, #detail td:first-of-type span {border: 2px solid transparent;}
+#bandeau a img:hover, #detail a img:hover, #detail td:first-of-type span:hover {border-color: green;}
+#help_nav {display: none;}
+#help_nav + div {display:none; position: fixed; top: 10em; right: 10%; width: 400px; margin:0; padding: 10px; background-color: #DFF5F1; border: 1px solid #4B7A9C; border-radius: 5px; text-align: justify; z-index: 10;}
+#help_nav:checked + div {display: block;}
+#help_nav + div ul {padding-left: 1em;}
+#help_nav + div + table #help::before {display: inline-block; width: 75px; text-align: right; content: 'Afficher'}
+#help_nav:checked + div + table #help::before {content: 'Masquer';}
+#help_nav:checked + div + table #help {color: #FFF; background-color: green;}
+#help_nav + div ul {margin: 0.5em 0;}
+th[title]:hover {background-color: yellow; cursor: help;}
+td {border-left: 1px solid #A99;}
+td:first-of-type, td:nth-of-type(2) {border-left: inherit;}
+td:nth-of-type(2) {padding-left: 5px;}
+#help {margin:0; padding:3px; cursor: pointer; white-space: nowrap;}
+.alert {padding: 1em 0; text-align: center; color: red;}
+.first td {border-top: 2px solid #A99;}
+.rss {margin: 0; padding: 0}
+.rss:hover {background-color: inherit;}
+
+#catalogue { display: flex; justify-content: center; flex-wrap: wrap;}
+#catalogue p { margin: 0.3rem 0; }
+#catalogue h4 { text-align: center;}
+#catalogue .plugin {
+	display: flex;
+	flex-direction: column;
+	width: 22rem;
+	margin: 0.5rem;
+	padding: 0;
+	background-color: #fff;
+	border: none;
+	box-shadow: 4px 4px 3px #aaa;
+	border-radius: 0.5rem;
+}
+#catalogue h4 {
+	margin: 0;
+	padding: 0;
+	background-color: #556;
+	color: orange;
+	letter-spacing: 0.2rem;
+}
+#catalogue h5 {
+	margin: 0;
+	background-color: orange;
+}
+#catalogue h4 a {
+	display: inline-block;
+	width: 100%;
+	margin: 0;
+	padding: 0.3rem 0;
+	color: orange;
+	text-decoration: none;
+}
+#catalogue h4 a:hover {
+	color: #fff;
+}
+#catalogue .plugin span {
+	display: inline-block;
+	width: 4rem;
+	text-align: right;
+	margin-right: 0.5rem;
+	font-style: italic;
+	color: #aaa;
+}
+#catalogue .descr {
+	flex-grow: 1;
+	text-align: justify;
+	padding: 0 0.5rem;
+	font-family: "Skolar Regular","Roboto Slab","Droid Serif",Cambria,Georgia,"Times New Roman",Times,serif;
+	font-size: 120%;
+}
+#catalogue .descr > a {
+	float: left;
+	margin-right: 0.5rem;
+	padding: 0;
+	text-decoration: none;
+}
+div.scrollable-table { overflow: auto;}
+div.scrollable-table table { white-space: nowrap; }
+@media screen and (min-width: 46rem) {
+	#bandeau {position: sticky; top:0;}
+	#bandeau h1, #bandeau h2 { padding: 0 1rem; }
+}
+@media screen and (min-width: 63rem) {
+	#bandeau {padding-bottom: 0.5rem;}
+	#bandeau > div:first-of-type {padding: 0 1.5%;}
+	#bandeau h1 {margin-top: 1rem; lline-height: 1.6;}
+}
