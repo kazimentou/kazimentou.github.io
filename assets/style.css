@@ -1,13 +1,14 @@
 * {margin:0; padding: 0; box-sizing: border-box;}
 body {font-family: 'Noto Sans',Droid,Arial,Georgia,Sans-Serif; color: #000; background-color: #ebeff2; background-image: url('background.png');
 }
-.logo {width: 8rem; margin-top: 3rem;}
+.logo {margin-top: 2rem;}
 .logo a {display: block;}
 .logo img {max-width:100%;}
 .nowrap > * { margin: 0 0.3rem; white-space: nowrap;}
-#bandeau {padding: 0.3rem 0.7rem 0 0; background-color: #ddd; line-height: 1.2;}
+#bandeau {display: grid; grid-template-columns: 60px auto 60px; padding: 0.3rem 0.7rem 0 0; background-color: #ddd; line-height: 1.2; font-size: 90%;}
+#bandeau h2 {grid-column: span 3;}
 #bandeau span {white-space: nowrap;}
-#bandeau > div:first-of-type {display: flex; justify-content: space-between;}
+#bandeau > div:first-of-type > div:last-of-type {margin-top: 2.2rem;}
 
 #menu {position: fixed; top: 0; left: 0;}
 #nav-toggle {display: none;}
@@ -19,7 +20,7 @@ body {font-family: 'Noto Sans',Droid,Arial,Georgia,Sans-Serif; color: #000; back
 	background-color: #eee;
 	text-align: center;
 	list-style: none;
-	transition: left 1s;
+	transition: left 0.3s ease;
 }
 #nav-toggle:checked + ul {left: 0;}
 #menu label {
@@ -38,12 +39,12 @@ h3 + p a {padding: 0 10px;}
 #bandeau a {text-decoration: none;}
 #bandeau div {padding: 0; text-align: center;}
 #bandeau label {cursor: pointer;}
-p:last-of-type, #detail + p {text-align: center;}
+/* p:last-of-type, #detail + p {text-align: center;} */
 h1 {margin-top: 0;}
 h1 + p {margin-bottom: 0;}
 label, a {padding: 0 4px;}
 label:hover, a:hover {color: #FFF; background-color: green;}
-.url-help {max-width: 64rem; margin: 0.5rem auto;}
+.url-help {margin: 0.5rem;}
 .url-help ul {padding-left: 1.5rem; margin: 0;}
 #detail {width: 99%; background-color: #FFF; border: 1px solid #A99; margin: 5px auto; border-spacing: 0;}
 #detail thead {background-color: #C2C2A6; }
@@ -74,46 +75,49 @@ td:nth-of-type(2) {padding-left: 5px;}
 #help {margin:0; padding:3px; cursor: pointer; white-space: nowrap;}
 .alert {padding: 1em 0; text-align: center; color: red;}
 .first td {border-top: 2px solid #A99;}
-.rss {margin: 0; padding: 0}
 .rss:hover {background-color: inherit;}
 
-#catalogue { display: flex; justify-content: center; flex-wrap: wrap;}
-#catalogue p { margin: 0.3rem 0; }
-#catalogue h4 { text-align: center;}
-#catalogue .plugin {
+#catalogue {padding-right: 0.7rem;}
+#catalogue article {
 	display: flex;
 	flex-direction: column;
-	width: 22rem;
-	margin: 0.5rem;
+	max-width: 23rem;
+	margin: 0.5rem auto;
 	padding: 0;
 	background-color: #fff;
 	border: none;
 	box-shadow: 4px 4px 3px #aaa;
 	border-radius: 0.5rem;
 }
-#catalogue h4 {
+#catalogue article header {
 	margin: 0;
 	padding: 0;
 	background-color: #556;
 	color: orange;
+	text-align: center;
 	letter-spacing: 0.2rem;
 }
-#catalogue h5 {
-	margin: 0;
-	background-color: orange;
-}
-#catalogue h4 a {
+#catalogue article header a {
 	display: inline-block;
 	width: 100%;
 	margin: 0;
 	padding: 0.3rem 0;
-	color: orange;
+	color: inherit;
 	text-decoration: none;
 }
-#catalogue h4 a:hover {
+#catalogue article header a:hover {
 	color: #fff;
 }
-#catalogue .plugin span {
+#catalogue article section {
+	flex-grow: 1;
+}
+#catalogue article footer {
+	margin: 0;
+	background-color: orange;
+	text-align: center;
+}
+#catalogue article p { margin: 0.3rem 0; }
+#catalogue article section span {
 	display: inline-block;
 	width: 4rem;
 	text-align: right;
@@ -121,27 +125,56 @@ td:nth-of-type(2) {padding-left: 5px;}
 	font-style: italic;
 	color: #aaa;
 }
+#catalogue article footer span {
+	white-space: nowrap;
+}
 #catalogue .descr {
-	flex-grow: 1;
-	text-align: justify;
 	padding: 0 0.5rem;
 	font-family: "Skolar Regular","Roboto Slab","Droid Serif",Cambria,Georgia,"Times New Roman",Times,serif;
 	font-size: 120%;
+	overflow: auto;
+}
+body.page-themes #catalogue .descr {
+	text-align: center;
 }
 #catalogue .descr > a {
+	text-decoration: none;
+}
+body.page-plugins #catalogue .descr > a {
 	float: left;
 	margin-right: 0.5rem;
 	padding: 0;
-	text-decoration: none;
 }
-div.scrollable-table { overflow: auto;}
-div.scrollable-table table { white-space: nowrap; }
+div.scrollable-table { overflow: auto; white-space: nowrap; padding-bottom: 0.8rem;}
+div.nothing { padding: 2rem 0; color: red; font-size: 250%; font-weight: bold;}
+
+@media screen and (min-width: 41rem) {
+	#catalogue {display: flex; justify-content: space-around; flex-wrap: wrap;}
+	#catalogue article {width: 48%; margin: 0.5rem 0.3rem;}
+}
 @media screen and (min-width: 46rem) {
 	#bandeau {position: sticky; top:0;}
 	#bandeau h1, #bandeau h2 { padding: 0 1rem; }
+	.logo { margin-top: 0;
 }
 @media screen and (min-width: 63rem) {
-	#bandeau {padding-bottom: 0.5rem;}
+	#bandeau {padding-bottom: 0.5rem; padding: 0.3rem 2% 0; }
 	#bandeau > div:first-of-type {padding: 0 1.5%;}
 	#bandeau h1 {margin-top: 1rem; lline-height: 1.6;}
+
+	#catalogue article {width: 31.8%;}
+	#catalogue.count-2 {justify-content: center;}
+	#catalogue.count-2 article { margin: 0.5rem 1rem;}
+
+	.url-help {max-width: 64rem; margin: 0.5rem auto;}
+}
+@media screen and (min-width: 86rem) {
+	#catalogue article {width: 25.5%;}
+	#catalogue.count-3 {justify-content: center;}
+	#catalogue.count-3 article { margin: 0.5rem 1rem;}
+}
+@media screen and (min-width: 96rem) {
+	#catalogue article {width: 19.3%;}
+	#catalogue.count-4 {justify-content: center;}
+	#catalogue.count-4 article { margin: 0.5rem 1rem;}
 }

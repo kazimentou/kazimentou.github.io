@@ -1,0 +1,14 @@
+<?xml version="1.0"  encoding="UTF-8" ?>
+<rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom">
+	<channel>
+		<title>Kazimentou, playstore for Pluxml</title>
+		<link>http://bpi-berry.lan/repo/scripts.html</link>
+		<description>Plugins, thèmes, scripts pour le C.M.S. PluXml</description>
+		<lastBuildDate>Wed, 26 Dec 2018 22:16:32 +0100</lastBuildDate>
+		<atom:link xmlns:atom="http://www.w3.org/2005/Atom" rel="self" type="application/rss+xml" href="http://bpi-berry.lan/repo/scripts-rss.xml" />
+		<generator>Repository for Pluxml v3.0 (2018-12-26)</generator>
+		<skipDays>
+			<day>Sunday</day>
+		</skipDays>
+	</channel>
+</rss>

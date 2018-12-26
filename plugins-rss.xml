@@ -1,0 +1,50 @@
+<?xml version="1.0"  encoding="UTF-8" ?>
+<rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom">
+	<channel>
+		<title>Kazimentou, playstore for Pluxml</title>
+		<link>http://bpi-berry.lan/repo/index.html</link>
+		<description>Plugins, thèmes, scripts pour le C.M.S. PluXml</description>
+		<lastBuildDate>Wed, 26 Dec 2018 22:16:04 +0100</lastBuildDate>
+		<atom:link xmlns:atom="http://www.w3.org/2005/Atom" rel="self" type="application/rss+xml" href="http://bpi-berry.lan/repo/plugins-rss.xml" />
+		<generator>Repository for Pluxml v3.0 (2018-12-26)</generator>
+		<skipDays>
+			<day>Sunday</day>
+		</skipDays>
+		<item>
+			<title>kzGallery</title>
+			<link>http://bpi-berry.lan/repo/plugins/kzGallery-1_0_0.zip</link>
+			<description>Associe à un ou plusieurs dossiers à un article ou une page statique pour créer des galerie photos.</description>
+			<dc:creator>Bazooka07</dc:creator>
+			<pubDate>Wed, 14 Nov 2018 00:00:00 +0100</pubDate>
+			<enclosure url="http://bpi-berry.lan/repo/workdir/assets/plugins/kzGallery.png" length="4916" type="image/png" />
+			<guid>index.html_2018-11-14-kzGallery</guid>
+		</item>
+		<item>
+			<title>CodeMirror></title>
+			<link>http://bpi-berry.lan/repo/plugins/codemirror-2_1_2.zip</link>
+			<description>Plugin pour CodeMirror 5.39.0. Editeur de code avec coloration syntaxique, auto-complétion et repli de code (folding).</description>
+			<dc:creator>Jean-Pierre Pourrez</dc:creator>
+			<pubDate>Mon, 09 Jul 2018 00:00:00 +0200</pubDate>
+			<enclosure url="http://bpi-berry.lan/repo/workdir/assets/plugins/codemirror.png" length="3763" type="image/png" />
+			<guid>index.html_2018-07-09-codemirror</guid>
+		</item>
+		<item>
+			<title>moveMyDatas</title>
+			<link>http://bpi-berry.lan/repo/plugins/moveMyDatas-1_0_1.zip</link>
+			<description>Gérez les dossiers de vos données</description>
+			<dc:creator>Jean-Pierre Pourrez</dc:creator>
+			<pubDate>Tue, 19 Dec 2017 00:00:00 +0100</pubDate>
+			<enclosure url="http://bpi-berry.lan/repo/workdir/assets/plugins/moveMyDatas.jpg" length="1849" type="image/jpeg" />
+			<guid>index.html_2017-12-19-moveMyDatas</guid>
+		</item>
+		<item>
+			<title>TinyMCE</title>
+			<link>http://bpi-berry.lan/repo/plugins/tinyMCE-2_2_1.zip</link>
+			<description>Plugin pour TinyMCE - Utilise les gestionnaires de médias et d'articles de PluXML.</description>
+			<dc:creator>Jean-Pierre Pourrez</dc:creator>
+			<pubDate>Wed, 22 Nov 2017 00:00:00 +0100</pubDate>
+			<enclosure url="http://bpi-berry.lan/repo/workdir/assets/plugins/tinyMCE.png" length="2292" type="image/png" />
+			<guid>index.html_2017-11-22-tinyMCE</guid>
+		</item>
+	</channel>
+</rss>
