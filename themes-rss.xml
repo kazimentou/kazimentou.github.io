@@ -4,11 +4,20 @@
 		<title>Kazimentou, playstore for Pluxml</title>
 		<link>http://bpi-berry.lan/repo/themes.html</link>
 		<description>Plugins, thèmes, scripts pour le C.M.S. PluXml</description>
-		<lastBuildDate>Wed, 26 Dec 2018 22:16:27 +0100</lastBuildDate>
+		<lastBuildDate>Thu, 27 Dec 2018 22:23:33 +0100</lastBuildDate>
 		<atom:link xmlns:atom="http://www.w3.org/2005/Atom" rel="self" type="application/rss+xml" href="http://bpi-berry.lan/repo/themes-rss.xml" />
-		<generator>Repository for Pluxml v3.0 (2018-12-26)</generator>
+		<generator>Repository for Pluxml v3.0 (2018-12-27)</generator>
 		<skipDays>
 			<day>Sunday</day>
 		</skipDays>
+		<item>
+			<title>KnaCSS + PluxZero</title>
+			<link>http://bpi-berry.lan/repo/themes/ardechecs-181227.zip</link>
+			<description>Thème basé sur Knacss version 7 (PluXml 5.6)</description>
+			<dc:creator>Bazooka07</dc:creator>
+			<pubDate>Thu, 27 Dec 2018 00:00:00 +0100</pubDate>
+			<enclosure url="http://bpi-berry.lan/repo/workdir/assets/themes/ardechecs.png" length="101248" type="image/png" />
+			<guid>themes.html_2018-12-27-ardechecs</guid>
+		</item>
 	</channel>
 </rss>

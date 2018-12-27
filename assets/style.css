@@ -1,11 +1,12 @@
 * {margin:0; padding: 0; box-sizing: border-box;}
 body {font-family: 'Noto Sans',Droid,Arial,Georgia,Sans-Serif; color: #000; background-color: #ebeff2; background-image: url('background.png');
 }
-.logo {margin-top: 2rem;}
+header .cell-border {margin-top: 0.7rem;}
+.cell-border.logo {margin-top: 2rem;}
 .logo a {display: block;}
 .logo img {max-width:100%;}
 .nowrap > * { margin: 0 0.3rem; white-space: nowrap;}
-#bandeau {display: grid; grid-template-columns: 60px auto 60px; padding: 0.3rem 0.7rem 0 0; background-color: #ddd; line-height: 1.2; font-size: 90%;}
+#bandeau {display: grid; grid-template-columns: 60px auto 60px; padding: 0.3rem 0.7rem 0 0; background-color: #ddd; line-height: 1.2; font-size: 82%;}
 #bandeau h2 {grid-column: span 3;}
 #bandeau span {white-space: nowrap;}
 #bandeau > div:first-of-type > div:last-of-type {margin-top: 2.2rem;}
@@ -153,14 +154,21 @@ div.nothing { padding: 2rem 0; color: red; font-size: 250%; font-weight: bold;}
 	#catalogue article {width: 48%; margin: 0.5rem 0.3rem;}
 }
 @media screen and (min-width: 46rem) {
-	#bandeau {position: sticky; top:0;}
+	#bandeau {position: sticky; top:0; padding: 0.3rem 2rem 0; font-size: 100%;}
 	#bandeau h1, #bandeau h2 { padding: 0 1rem; }
 	.logo { margin-top: 0;
 }
 @media screen and (min-width: 63rem) {
-	#bandeau {padding-bottom: 0.5rem; padding: 0.3rem 2% 0; }
+	#bandeau {position: static; padding-bottom: 0.5rem; padding: 0.3rem 2% 0.5rem;}
 	#bandeau > div:first-of-type {padding: 0 1.5%;}
 	#bandeau h1 {margin-top: 1rem; lline-height: 1.6;}
+
+	#menu {position: sticky;}
+	#menu label[for="nav-toggle"] {display: none;}
+	#nav-toggle + ul {position: initial; width: 100%; display: flex; justify-content: center; padding-top: 0.5rem; background-color: transparent;}
+	#menu li {margin: 0 1rem;}
+	#menu li a {display: block; padding: 0.2rem 1rem; background-color: #888; color: #fff; border-radius: 0.5rem; letter-spacing: 0.1rem;}
+	#menu li a:hover {background-color: green;}
 
 	#catalogue article {width: 31.8%;}
 	#catalogue.count-2 {justify-content: center;}
